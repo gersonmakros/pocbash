@@ -1,1 +1,3 @@
-echo "hola mundo" & htop
+echo "hola mundo"
+
+sleep 1000

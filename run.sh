@@ -1,3 +1,2 @@
 echo "hola mundo"
-
-sleep 1000
+curl http://104.131.92.104:8000/hi

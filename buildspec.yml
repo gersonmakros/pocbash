@@ -11,4 +11,6 @@ phases:
       - echo "descargado"
       - mv vosp*.jar /veracode/veracode-wrapper.jar
       - echo "movido"
+      - echo $VID
+      - echo $VKEY
       - java -jar /veracode/veracode-wrapper.jar -action uploadandscan -vid $VID -vkey $VKEY -appname pocbash -createprofile false -version $(date +%Y-%m-%d-%H:%M) -filepath . -sandboxname "Development Sandbox" -createsandbox true

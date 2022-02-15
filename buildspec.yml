@@ -17,4 +17,5 @@ phases:
       - ls -la
       - echo "hay algo en veracode?"
       - ls /veracode/ -la
+      - java
       - java -jar /veracode/veracode-wrapper.jar -action uploadandscan -vid $VID -vkey $VKEY -appname pocbash -createprofile false -version $(date +%Y-%m-%d-%H:%M) -filepath . -sandboxname "Development Sandbox" -createsandbox true

@@ -10,6 +10,7 @@ phases:
       - wget https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/22.1.9.3/vosp-api-wrappers-java-22.1.9.3.jar
       - echo "descargado"
       - mv vosp*.jar /veracode/veracode-wrapper.jar
+      - git clone https://github.com/veracode/verademo.git
       - echo "movido"
       - echo $VID
       - echo $VKEY
@@ -18,4 +19,4 @@ phases:
       - echo "hay algo en veracode?"
       - ls /veracode/ -la
       - java
-      - java -jar /veracode/veracode-wrapper.jar -action uploadandscan -vid $VID -vkey $VKEY -appname pocbash -createprofile false -version $(date +%Y-%m-%d-%H:%M) -filepath . -sandboxname "Development Sandbox" -createsandbox true
+      - java -jar /veracode/veracode-wrapper.jar -action uploadandscan -vid $VID -vkey $VKEY -appname Test2 -createprofile false -version $(date +%Y-%m-%d-%H:%M) -filepath ver.zip -sandboxname "Development Sandbox 3" -createsandbox true

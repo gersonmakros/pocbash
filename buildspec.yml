@@ -21,4 +21,4 @@ phases:
   post_build:
     on-failure: CONTINUE
     commands:
-      - java -jar /veracode/veracode-wrapper.jar -action uploadandscan -vid $VID -vkey $VKEY -appname Test2 -createprofile false -version $(date +%Y-%m-%d-%H:%M) -filepath ver.zip -sandboxname "Development Sandbox 3" -createsandbox true
+      - java -jar /veracode/veracode-wrapper.jar -action uploadandscan -vid $VID -vkey $VKEY -appname Test2 -createprofile false -version $(date +%Y-%m-%d-%H:%M) -filepath ver.zip -sandboxname "Development Sandbox 3" -createsandbox true || echo "ok"
